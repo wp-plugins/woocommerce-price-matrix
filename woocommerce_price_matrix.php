@@ -3,7 +3,7 @@
 * Plugin Name: WooCommerce Price Matrix
 * Plugin URI: http:// www.creare.co.uk/
 * Description: A small, useful plugin for replacing variable price dropdowns with a price matrix.
-* Version: 1.0
+* Version: 1.0.1
 * Author: Shane Welland
 * Author URI: http:// www.creare.co.uk/
 * License: GPL2
