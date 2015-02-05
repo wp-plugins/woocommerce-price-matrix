@@ -68,12 +68,10 @@ WPM will take your first instance of the variation and ignore any others
 == Changelog ==
 
 = 1.0.1 =
-
 * [Fixed] Admin checkbox issues
 * [Added] Frontend Dropdown Fallback (<2 Attributes)
 
 = 1.0 =
-
 * Initial release.
 
 == Upgrade Notice ==
