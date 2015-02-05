@@ -7,20 +7,16 @@ jQuery( function( a ) {
 
 	wpm_show_and_hide_panels();
 
+	a( attributes ).not( ':checked' ).attr( 'disabled' , true );
+
 	toggle.change( function( e ) {
 		wpm_show_and_hide_panels();
 
 		if( is_checked( a( this ) ) === false )
 			return;
 
-		active_attributes = get_active_attributes();
-
-		if( active_attributes.length > 2 ) {
-			for( var i = active_attributes.length-1; i >= 2; i-- ) {
-				a( active_attributes[i] ).attr( 'checked', false );
-			}
-			trigger_save();
-		}
+		process_checkboxes();
+		trigger_save();
 	});
 
 	function wpm_show_and_hide_panels() {
@@ -34,16 +30,17 @@ jQuery( function( a ) {
 		}
 	}
 
-	attributes.on( 'click', function(e) {
-		if( is_checked( toggle ) === false )
-			return;
+	attributes.on( 'click', process_checkboxes );
 
-		if( active_attributes.length >= 2 )
-			return false;
-	});
+	function process_checkboxes() {
+		if( is_checked( toggle ) == true ) {
+			var disabled = get_active_attributes().length >= 2;
+			a( attributes ).not( ':checked' ).attr( 'disabled' , disabled );
+		}
+	}
 
 	function is_checked( e ) {
-		return ( e.attr( 'checked' ) === 'checked' ) ? true : false;
+		return ( e.attr( 'checked' ) == 'checked' ) ? true : false;
 	}
 
 	// Get all checkboxes

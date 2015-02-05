@@ -61,6 +61,19 @@ function wpm_variation_grid( $price_markup = false, $taken = array() ) {
 		}
 	}
 
+	if( $active_attribute_one['name'] == false || $active_attribute_two['name'] == false ) {
+		?>
+		
+		<style>
+		form.variations_form table.variations {
+			display: block !important;
+		}
+		</style>
+
+		<?php
+		return;
+	}
+
 	// Store child product data
 	foreach( $product->children as $child_id ) {
 		$child_data = get_post_meta( $child_id );

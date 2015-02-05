@@ -4,7 +4,7 @@ Donate link: http://www.creare.co.uk/
 Tags: woocommerce, price matrix, price table, variable product, product extension
 Requires at least: 3.0.0
 Tested up to: 4.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,11 @@ WPM will take your first instance of the variation and ignore any others
 4. Load the product in your shop, WPM should now be displaying a table instead of dropdowns.
 
 == Changelog ==
+
+= 1.0.1 =
+
+[Fixed] Admin checkbox issues
+[Added] Frontend Dropdown Fallback (<2 Attributes)
 
 = 1.0 =
 
